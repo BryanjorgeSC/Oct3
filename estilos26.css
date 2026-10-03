@@ -1,0 +1,111 @@
+:root {
+    --principal: #010c04;
+    --oscuro: #196740;
+    --fondo: #ffffff69;   /* Fondo claro por defecto */
+    --blanco: #acd6ab;
+    --espacio: 20px;
+    --radio: 10px;
+    --color_adicional: #0066ff; /* Color adicional en modo claro */
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* 🎨 Modo claro (por defecto) */
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--fondo);
+    color: var(--oscuro);
+}
+
+/* 🌙 Modo oscuro */
+body.oscuro {
+    --fondo: #2e2c2c;
+    --oscuro: #ffffff8b;
+    --color_adicional: #ff8f00;
+
+    background-color: var(--fondo);
+    color: var(--oscuro);
+}
+
+/* Ejemplo de uso de variables en otros elementos */
+header {
+    background: var(--oscuro);
+    color: var(--fondo);
+    padding: var(--espacio);
+}
+
+nav {
+    display: flex;
+    gap: var(--espacio);
+}
+
+nav a {
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--color_adicional);
+}
+
+.hero {
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.hero h2 {
+    font-size: 50px;
+    margin-bottom: var(--espacio);
+}
+
+.hero p {
+    margin-bottom: var(--espacio);
+}
+
+button {
+    background: var(--principal);
+    color: var(--blanco);
+    padding: 20px 40px;
+    border-radius: var(--radio);
+}
+
+.servicios {
+    display: flex;
+    gap: var(--espacio);
+    padding: var(--espacio);
+}
+
+article {
+    background: var(--blanco);
+    color: var(--principal);
+    padding: var(--espacio);
+    flex: 1;
+    border-radius: var(--radio);
+    font-size: 15px;
+}
+
+footer {
+    background: var(--oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: var(--espacio);
+}
+
+.mensaje {
+    display: none;
+    background: var(--blanco);
+    padding: 30px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: var(--radio);
+}
+
+.mensaje button {
+    margin-top: 15px;
+}
